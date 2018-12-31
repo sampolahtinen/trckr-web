@@ -1,7 +1,5 @@
 # React Starter Kit
 
-## Includes:
-
 ### Core:
 * Babel v. 7.2.2
 * Webpack v. 4
