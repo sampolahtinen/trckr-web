@@ -1,5 +1,4 @@
 # React Starter Kit
------
 
 ## Includes:
 
