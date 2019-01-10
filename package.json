@@ -9,8 +9,9 @@
     "test:coverage": "jest --watch --coverage",
     "test:watch": "jest --watch",
     "lint": "eslint ./src --fix",
-    "dev": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production"
+    "dev": "webpack-dev-server --open --mode development --env.env=dev",
+    "build": "webpack --mode production --env.env=prod",
+    "start": "serve -s dist"
   },
   "keywords": [],
   "license": "ISC",
