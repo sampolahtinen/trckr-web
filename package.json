@@ -10,6 +10,7 @@
     "test:watch": "jest --watch",
     "lint": "eslint ./src --fix",
     "dev": "webpack-dev-server --open --mode development --env.env=dev",
+    "build-dev": "webpack --mode development",
     "build": "webpack --mode production --env.env=prod",
     "start": "serve -s dist"
   },
@@ -39,11 +40,17 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "common-path": "^1.0.0",
+    "compression-webpack-plugin": "^2.0.0",
     "eslint-config-airbnb": "^17.1.0",
+    "path": "^0.12.7",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "serve": "^10.1.1"
+    "react-hot-loader": "^4.6.3",
+    "serve": "^10.1.1",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack-merge": "^4.2.1"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/.jest/setupTests.js",

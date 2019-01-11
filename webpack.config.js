@@ -1,29 +1,10 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+/* eslint-disable */
+const webpackMerge = require('webpack-merge');
 
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader"
-          }
-        ]
-      }
-    ]
-  },
-  plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
-    })
-  ]
+const commonConfig = require('./build-utils/webpack.common');
+
+module.exports = (env) => {
+  const envConfig = require(`./build-utils/webpack.${env.env}.js`);
+
+  return webpackMerge(commonConfig, envConfig);
 };
