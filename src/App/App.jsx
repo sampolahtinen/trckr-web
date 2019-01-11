@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
 class App extends Component {
   constructor(props) {
@@ -13,8 +12,5 @@ class App extends Component {
     );
   }
 }
-
-const insertApp = document.getElementById('app');
-ReactDOM.render(<App />, insertApp);
 
 export default App;
