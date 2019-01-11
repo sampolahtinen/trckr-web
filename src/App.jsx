@@ -6,14 +6,15 @@ class App extends Component {
     super(props);
     this.state = {};
   }
+
   render() {
     return (
       <h2>Hello world!</h2>
-    )
+    );
   }
 }
 
 const insertApp = document.getElementById('app');
-insertApp ? ReactDOM.render(<App />, insertApp) : false;
+ReactDOM.render(<App />, insertApp);
 
 export default App;
